@@ -1,0 +1,91 @@
+# Requisitos do Projeto
+
+## Dependências de Linguagem
+
+- **Python**: 3.7 ou superior
+
+## Dependências Externas
+
+**Nenhuma!** 
+
+Este projeto usa apenas a biblioteca padrão (stdlib) do Python:
+- `multiprocessing` - Paralelismo real entre processos
+- `dataclasses` - Estruturas de dados (Python 3.7+)
+- `enum` - Enumerações
+- `datetime` - Gerenciamento de datas e horas
+- `json` - Serialização JSON
+- `threading` - Sincronização
+- `time` - Medição de tempo
+- `random` - Números aleatórios
+- `pathlib` - Caminhos de arquivo
+- `argparse` - Parsing de argumentos CLI
+
+## Por que nenhuma dependência externa?
+
+1. **Simplicidade**: Apenas Python puro
+2. **Portabilidade**: Roda em qualquer máquina com Python 3.7+
+3. **Sem problemas de compatibilidade**: Nenhuma versão a conflitar
+4. **Foco em conceitos**: O código foca em padrões paralelos, não em frameworks
+
+## Verificar Versão do Python
+
+```bash
+python3 --version
+# Deve ser 3.7 ou superior
+```
+
+## Instalação (se necessário)
+
+### Ubuntu/Debian
+```bash
+sudo apt-get update
+sudo apt-get install python3.10  # ou versão mais nova
+```
+
+### macOS (com Homebrew)
+```bash
+brew install python@3.10
+```
+
+### Windows
+Baixar de: https://www.python.org/downloads/
+
+## Estrutura Mínima Necessária
+
+```
+INE5645 - T1 - Programacao Concorrente/
+├── main.py
+├── src/
+│   ├── __init__.py
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── pedido.py
+│   │   └── config.py
+│   ├── view/
+│   │   ├── __init__.py
+│   │   └── monitor.py
+│   ├── controller/
+│   │   ├── __init__.py
+│   │   └── orchestrator.py
+│   └── workers/
+│       ├── __init__.py
+│       └── workers.py
+├── README.md
+├── INSTALACAO.md
+├── TESTES.md
+└── requirements.txt (este arquivo)
+```
+
+## Como Usar Este Arquivo
+
+Se você quiser instalar dependências (não necessário para este projeto):
+
+```bash
+# Apenas para referência - nenhuma dependência para instalar!
+pip install -r requirements.txt
+# (será executado com sucesso, mas sem fazer nada)
+```
+
+---
+
+**Nota**: Este projeto foi implementado com Python puro para garantir portabilidade e foco pedagógico nos conceitos de programação paralela.

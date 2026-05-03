@@ -1,0 +1,35 @@
+{
+  "tempo_total_segundos": 3.537721,
+  "timestamp_inicio": "2026-05-03T16:41:08.050169",
+  "timestamp_fim": "2026-05-03T16:41:11.588108",
+  "pedidos_processados": {
+    "validacao_sucesso": 10,
+    "financeira_sucesso": 7,
+    "logistica_sucesso": 6,
+    "logistica_falha": 1,
+    "financeira_falha": 3
+  },
+  "tempos_por_etapa": {
+    "validacao": {
+      "minimo": 0.21,
+      "maximo": 0.49,
+      "media": 0.382,
+      "total": 3.82,
+      "count": 10
+    },
+    "financeira": {
+      "minimo": 0.14,
+      "maximo": 0.47,
+      "media": 0.24428571428571427,
+      "total": 1.71,
+      "count": 7
+    },
+    "logistica": {
+      "minimo": 0.17,
+      "maximo": 0.43,
+      "media": 0.255,
+      "total": 1.53,
+      "count": 6
+    }
+  }
+}
