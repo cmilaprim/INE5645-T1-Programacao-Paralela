@@ -14,26 +14,29 @@ class ConfiguracaoSistema:
     - Tempos de processamento
     """
     
-    # Worker Pool - Quantos workers por etapa?
-    num_validadores: int = 3          # Validação de pedidos
-    num_financeiros: int = 2          # Validação financeira
-    num_logisticos: int = 2           # Logística/Entrega
+    #worker Pool - define quantos workers por etapa
+    num_validadores: int = 3          #validação de pedidos
+    num_financeiros: int = 2          #validação financeira
+    num_logisticos: int = 2           #logística/entrega
     
-    # Taxa de Falha - Qual % falha em cada etapa?
-    taxa_falha_validacao: float = 0.1      # 10% dos pedidos falham
-    taxa_falha_financeira: float = 0.15    # 15% dos pedidos falham
-    taxa_falha_logistica: float = 0.05     # 5% dos pedidos falham
+    #taxa de Falha - define a taxa de falha em cada etapa
+    taxa_falha_validacao: float = 0.1      #10% dos pedidos falham
+    taxa_falha_financeira: float = 0.15    #15% dos pedidos falham
+    taxa_falha_logistica: float = 0.05     #5% dos pedidos falham
     
-    # Produção - Quantos clientes/pedidos?
-    num_clientes: int = 1                   # 1 cliente gerando pedidos
-    pedidos_por_cliente: int = 50           # 50 pedidos por cliente
+    #produção - define quantos clientes e pedidos
+    num_clientes: int = 2                  #2 clientes gerando pedidos
+    pedidos_por_cliente: int = 5           #50 pedidos por cliente
     
-    # Timing - Quanto tempo leva cada operação?
-    tempo_processamento_min: float = 0.5    # Mínimo 0.5 segundos
-    tempo_processamento_max: float = 2.0    # Máximo 2.0 segundos
+    #timing - define os tempos de processamento
+    tempo_processamento_min: float = 0.5    #mínimo 0.5 segundos
+    tempo_processamento_max: float = 2.0    #máximo 2.0 segundos
     
-    # Itens disponíveis para compra
+    #itens disponíveis para compra
     itens_disponiveis: list = None
+    
+    #nomes dos clientes
+    nomes_clientes: dict = None
     
     def __post_init__(self):
         if self.itens_disponiveis is None:
@@ -47,6 +50,9 @@ class ConfiguracaoSistema:
                 "SSD",
                 "Memória RAM"
             ]
+        
+        if self.nomes_clientes is None:
+            self.nomes_clientes = {}
     
     def total_pedidos_esperados(self) -> int:
         """Calcula total de pedidos que serão gerados"""
@@ -79,25 +85,44 @@ class ConfiguracaoSistema:
 """
 
 
-# Configuração padrão
-CONFIG_PADRAO = ConfiguracaoSistema()
+#config padrão
+CONFIG_PADRAO = ConfiguracaoSistema(
+    nomes_clientes={
+        "CLT-000": "João Silva",
+        "CLT-001": "Maria Santos",
+        "CLT-002": "Pedro Oliveira",
+        "CLT-003": "Ana Costa",
+    }
+)
 
-# Configuração para testes rápidos
+#config para testes rápidos
 CONFIG_TESTE = ConfiguracaoSistema(
     num_validadores=2,
     num_financeiros=1,
     num_logisticos=1,
     pedidos_por_cliente=10,
     tempo_processamento_min=0.1,
-    tempo_processamento_max=0.5
+    tempo_processamento_max=0.5,
+    nomes_clientes={
+        "CLT-000": "João Silva",
+        "CLT-001": "Maria Santos",
+        "CLT-002": "Pedro Oliveira",
+        "CLT-003": "Ana Costa",
+    }
 )
 
-# Configuração para teste pesado
+#config para teste pesado
 CONFIG_PESADO = ConfiguracaoSistema(
     num_validadores=5,
     num_financeiros=4,
     num_logisticos=3,
     pedidos_por_cliente=200,
     tempo_processamento_min=0.5,
-    tempo_processamento_max=2.0
+    tempo_processamento_max=2.0,
+    nomes_clientes={
+        "CLT-000": "João Silva",
+        "CLT-001": "Maria Santos",
+        "CLT-002": "Pedro Oliveira",
+        "CLT-003": "Ana Costa",
+    }
 )

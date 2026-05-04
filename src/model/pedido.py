@@ -1,9 +1,3 @@
-"""
-Model: Definição da classe Pedido
-Padrão: MVC - Model
-Autor: [Nome dos alunos]
-"""
-
 from enum import Enum
 from datetime import datetime
 from dataclasses import dataclass
@@ -24,29 +18,19 @@ class StatusPedido(Enum):
 
 @dataclass
 class Pedido:
-    """
-    Representa um pedido de compra no sistema.
-    
-    Attributes:
-        id: Identificador único do pedido
-        cliente_id: ID do cliente
-        item: Descrição do item sendo comprado
-        valor: Valor do pedido
-        status: Status atual do pedido
-        timestamp_criacao: Quando foi criado
-        timestamps: Histórico de timestamps por etapa
-    """
     id: str
     cliente_id: str
+    nome_cliente: str
     item: str
     valor: float
     status: StatusPedido = StatusPedido.NOVO
     timestamp_criacao: datetime = None
-    timestamps: dict = None  # {'validacao': datetime, 'financeiro': datetime, ...}
+    timestamps: dict = None 
     
     def __post_init__(self):
         if self.timestamp_criacao is None:
             self.timestamp_criacao = datetime.now()
+        
         if self.timestamps is None:
             self.timestamps = {}
     
@@ -65,6 +49,7 @@ class Pedido:
         return {
             'id': self.id,
             'cliente_id': self.cliente_id,
+            'nome_cliente': self.nome_cliente,
             'item': self.item,
             'valor': self.valor,
             'status': self.status.value,
@@ -73,15 +58,16 @@ class Pedido:
         }
     
     def __str__(self):
-        return f"Pedido({self.id}, Cliente={self.cliente_id}, Item={self.item}, Status={self.status.value})"
+        return f"Pedido({self.id}, Cliente={self.nome_cliente}, Item={self.item}, Status={self.status.value})"
 
 
-def criar_pedido(cliente_id: str, item: str, valor: float) -> Pedido:
-    """Factory function para criar um novo pedido"""
-    pedido_id = str(uuid.uuid4())[:8]  # ID curto
-    return Pedido(
-        id=pedido_id,
-        cliente_id=cliente_id,
-        item=item,
-        valor=valor
-    )
+def criar_pedido(cliente_id: str, item: str, valor: float, config=None) -> Pedido:
+    """Criar um novo pedido"""
+    pedido_id = str(uuid.uuid4())[:8]
+    
+    if config is None or not hasattr(config, 'nomes_clientes') or not config.nomes_clientes:
+        nome_cliente = "Cliente Desconhecido"
+    else:
+        nome_cliente = config.nomes_clientes.get(cliente_id, "Cliente Desconhecido")
+    
+    return Pedido(id=pedido_id, cliente_id=cliente_id, nome_cliente=nome_cliente, item=item, valor=valor)
