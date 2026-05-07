@@ -1,4 +1,4 @@
-# Roteiro de apresentação — Sistema de Vendas Paralelo
+# Sistema de Vendas
 
 ## 1. Abertura
 
