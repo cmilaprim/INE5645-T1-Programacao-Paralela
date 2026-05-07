@@ -149,19 +149,8 @@ finaliza monitor
 
 Isso evita que uma etapa seja finalizada antes de receber todos os pedidos que ainda poderiam chegar.
 
-## 8. Monitor: por que não apenas print nos workers?
 
-O `print` direto ajuda na visualização, mas não é suficiente para gerar métricas confiáveis. Como os workers são processos diferentes, cada processo tem sua própria memória. Se cada um tentasse atualizar contadores ou arquivos diretamente, o relatório poderia ficar inconsistente.
-
-Com o monitor:
-
-```text
-workers -> fila_monitor -> monitor
-```
-
-O monitor recebe tudo em uma única fila, grava os eventos em ordem e consolida as métricas finais.
-
-## 9. Gargalo e throughput
+## 8. Gargalo e throughput
 
 O throughput é calculado como:
 
@@ -173,7 +162,7 @@ A etapa mais lenta limita a vazão do sistema. Se houver 3 validadores, 2 financ
 
 As filas limitadas ajudam a mostrar backpressure: quando a etapa final é mais lenta, a fila anterior pode encher, fazendo os financeiros esperarem, depois os validadores, e por fim os clientes.
 
-## 10. Vantagens da solução
+## 9. Vantagens da solução
 
 - Usa paralelismo real com `multiprocessing`.
 - Separa responsabilidades por arquivo e por etapa.
@@ -183,7 +172,7 @@ As filas limitadas ajudam a mostrar backpressure: quando a etapa final é mais l
 - Gera relatório JSON final com métricas.
 - Facilita demonstrar concorrência, paralelismo, pipeline e disputa por recurso.
 
-## 11. Desvantagens e limitações
+## 10. Desvantagens e limitações
 
 - Como é uma simulação, as validações são aleatórias e não representam regras reais de negócio.
 - `multiprocessing` tem custo maior que threads para criar processos e trocar objetos entre filas.
@@ -191,7 +180,7 @@ As filas limitadas ajudam a mostrar backpressure: quando a etapa final é mais l
 - O desempenho depende do gargalo do pipeline.
 - Para poucos pedidos, o overhead dos processos pode ser maior que o benefício do paralelismo.
 
-## 12. Demonstração sugerida
+## 11. Demonstração sugerida
 
 1. Rodar configuração rápida:
 
@@ -210,7 +199,3 @@ python main.py --config teste --logisticos 2
 ```
 
 7. Comparar tempo total e throughput.
-
-## 13. Fechamento
-
-A solução usa programação paralela baseada em processos, filas e padrões de projeto. A arquitetura permite que pedidos avancem em paralelo por um pipeline de vendas, enquanto o monitor centraliza os eventos e gera métricas finais confiáveis.
