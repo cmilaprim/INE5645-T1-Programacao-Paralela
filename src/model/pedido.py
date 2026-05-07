@@ -1,12 +1,10 @@
-from enum import Enum
+from dataclasses import dataclass, field
 from datetime import datetime
-from dataclasses import dataclass
-from typing import Optional
+from enum import Enum
+from typing import Dict
 import uuid
 
-
 class StatusPedido(Enum):
-    """Estados possíveis de um pedido"""
     NOVO = "Novo"
     VALIDADO = "Validado"
     REJEITADO_VALIDACAO = "Rejeitado na Validação"
@@ -16,6 +14,13 @@ class StatusPedido(Enum):
     FALHA_ENTREGA = "Falha na Entrega"
 
 
+STATUS_FINAIS = {
+    StatusPedido.REJEITADO_VALIDACAO,
+    StatusPedido.REJEITADO_FINANCEIRO,
+    StatusPedido.ENTREGUE,
+    StatusPedido.FALHA_ENTREGA,
+}
+
 @dataclass
 class Pedido:
     id: str
@@ -24,50 +29,40 @@ class Pedido:
     item: str
     valor: float
     status: StatusPedido = StatusPedido.NOVO
-    timestamp_criacao: datetime = None
-    timestamps: dict = None 
-    
-    def __post_init__(self):
-        if self.timestamp_criacao is None:
-            self.timestamp_criacao = datetime.now()
-        
-        if self.timestamps is None:
-            self.timestamps = {}
-    
+    timestamp_criacao: datetime = field(default_factory=datetime.now)
+    timestamps: Dict[str, datetime] = field(default_factory=dict)
+
     def registrar_timestamp(self, etapa: str):
-        """Registra o timestamp de uma etapa do processamento"""
         self.timestamps[etapa] = datetime.now()
-    
+
     def atualizar_status(self, novo_status: StatusPedido):
-        """Atualiza o status do pedido"""
         self.status = novo_status
-        etapa = novo_status.value.lower().replace(' ', '_')
+        etapa = novo_status.value.lower().replace(" ", "_")
         self.registrar_timestamp(etapa)
-    
+
+    def esta_finalizado(self) -> bool:
+        return self.status in STATUS_FINAIS
+
     def para_dict(self) -> dict:
-        """Converte o pedido para dicionário (para serialização/logs)"""
         return {
-            'id': self.id,
-            'cliente_id': self.cliente_id,
-            'nome_cliente': self.nome_cliente,
-            'item': self.item,
-            'valor': self.valor,
-            'status': self.status.value,
-            'timestamp_criacao': self.timestamp_criacao.isoformat(),
-            'timestamps': {k: v.isoformat() for k, v in self.timestamps.items()}
+            "id": self.id,
+            "cliente_id": self.cliente_id,
+            "nome_cliente": self.nome_cliente,
+            "item": self.item,
+            "valor": self.valor,
+            "status": self.status.value,
+            "timestamp_criacao": self.timestamp_criacao.isoformat(),
+            "timestamps": {k: v.isoformat() for k, v in self.timestamps.items()},
         }
-    
+
     def __str__(self):
-        return f"Pedido({self.id}, Cliente={self.nome_cliente}, Item={self.item}, Status={self.status.value})"
+        return (
+            f"Pedido({self.id}, Cliente={self.nome_cliente}, "
+            f"Item={self.item}, Status={self.status.value})"
+        )
 
 
-def criar_pedido(cliente_id: str, item: str, valor: float, config=None) -> Pedido:
-    """Criar um novo pedido"""
+def criar_pedido(cliente_id: str, nome_cliente: str, item: str, valor: float, config=None) -> Pedido:
     pedido_id = str(uuid.uuid4())[:8]
-    
-    if config is None or not hasattr(config, 'nomes_clientes') or not config.nomes_clientes:
-        nome_cliente = "Cliente Desconhecido"
-    else:
-        nome_cliente = config.nomes_clientes.get(cliente_id, "Cliente Desconhecido")
-    
-    return Pedido(id=pedido_id, cliente_id=cliente_id, nome_cliente=nome_cliente, item=item, valor=valor)
+
+    return Pedido(id=pedido_id, cliente_id=cliente_id, nome_cliente=nome_cliente, item=item, valor=valor,)

@@ -1,54 +1,77 @@
-import sys
+from __future__ import annotations
 import argparse
-from pathlib import Path
+import copy
+from multiprocessing import freeze_support
 
-src_path = Path(__file__).parent / "src"
-sys.path.insert(0, str(src_path.parent))
-
-from src.model.config import ConfiguracaoSistema, CONFIG_PADRAO, CONFIG_TESTE, CONFIG_PESADO
 from src.controller.orquestrador import Orquestrador
+from src.model.config import CONFIG_PADRAO, CONFIG_PESADO, CONFIG_TESTE
 
 
-def main():
+CONFIGURACOES = {
+    "padrao": CONFIG_PADRAO,
+    "teste": CONFIG_TESTE,
+    "pesado": CONFIG_PESADO,
+}
+
+
+def criar_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Sistema de Vendas Paralelo - INE 5645",
-        epilog="Exemplos:\n  python main.py\n  python main.py --teste\n  python main.py --pesado"
+        description="Executa o sistema de vendas paralelo."
     )
-    
-    parser.add_argument('--teste', action='store_true', help='configuração rápida para testes')
-    parser.add_argument('--pesado', action='store_true', help='configuração com muitos pedidos')
-    
-    args = parser.parse_args()
-    
-    if args.teste:
-        config = CONFIG_TESTE
-        print("\n Usando configuração TESTE (rápida)")
-    elif args.pesado:
-        config = CONFIG_PESADO
-        print("\n Usando configuração PESADA")
-    else:
-        config = CONFIG_PADRAO
-        print("\n Usando configuração PADRÃO")
-    
-    print(config)
-    
-    #inicializa o orquestrador passando a config que será usada
-    orquestrador = Orquestrador(config)
-    
-    try:
-        orquestrador.executar()
-        print("✓ Sistema concluído com sucesso!\n")
-        return 0
-        
-    except KeyboardInterrupt:
-        print("\n Sistema interrompido pelo usuário\n")
-        return 1
-    except Exception as e:
-        print(f"\n Erro: {e}\n")
-        import traceback
-        traceback.print_exc()
-        return 2
+    parser.add_argument(
+        "--config",
+        choices=CONFIGURACOES.keys(),
+        default="padrao",
+        help="Configuracao base para executar.",
+    )
+    parser.add_argument("--clientes", type=int, default=None)
+    parser.add_argument("--pedidos-por-cliente", type=int, default=None)
+    parser.add_argument("--validadores", type=int, default=None)
+    parser.add_argument("--financeiros", type=int, default=None)
+    parser.add_argument("--logisticos", type=int, default=None)
+    parser.add_argument("--tamanho-fila", type=int, default=None)
+    parser.add_argument("--falha-validacao", type=float, default=None)
+    parser.add_argument("--falha-financeira", type=float, default=None)
+    parser.add_argument("--falha-logistica", type=float, default=None)
+    parser.add_argument("--tempo-min", type=float, default=None)
+    parser.add_argument("--tempo-max", type=float, default=None)
+    parser.add_argument("--arquivo-log", type=str, default=None)
+    return parser
 
 
-if __name__ == '__main__':
-    sys.exit(main())
+def aplicar_sobrescritas(config, args):
+    sobrescritas = {
+        "num_clientes": args.clientes,
+        "pedidos_por_cliente": args.pedidos_por_cliente,
+        "num_validadores": args.validadores,
+        "num_financeiros": args.financeiros,
+        "num_logisticos": args.logisticos,
+        "tamanho_fila": args.tamanho_fila,
+        "taxa_falha_validacao": args.falha_validacao,
+        "taxa_falha_financeira": args.falha_financeira,
+        "taxa_falha_logistica": args.falha_logistica,
+        "tempo_processamento_min": args.tempo_min,
+        "tempo_processamento_max": args.tempo_max,
+        "arquivo_log": args.arquivo_log,
+    }
+
+    for atributo, valor in sobrescritas.items():
+        if valor is not None:
+            setattr(config, atributo, valor)
+
+    if hasattr(config, "_validar"):
+        config._validar()
+
+    return config
+
+
+def main() -> None:
+    args = criar_parser().parse_args()
+    config = copy.deepcopy(CONFIGURACOES[args.config])
+    config = aplicar_sobrescritas(config, args)
+    Orquestrador(config).executar()
+
+
+if __name__ == "__main__":
+    freeze_support()
+    main()
