@@ -1,160 +1,160 @@
-SISTEMA DE VENDAS - Iniciado em 2026-05-07 15:42:48
+SISTEMA DE VENDAS - Iniciado em 2026-05-09 16:17:27
 ================================================================================
 
-[15:42:48.966] [PID 16932] [monitor-active-object] [MONITOR] Active Object iniciado
-[15:42:48.925] [PID 1580] [cliente-1] [PRODUTOR 1] 5a75f459 - pedido_criado | cliente=João Silva; item=Teclado; valor=R$ 536.64; pedido 1/6
-[15:42:48.950] [PID 18356] [cliente-3] [PRODUTOR 3] cce72a35 - pedido_criado | cliente=Ana Costa; item=Memória RAM; valor=R$ 593.10; pedido 1/6
-[15:42:48.951] [PID 2352] [validador-0] [VALIDACAO 0] 5a75f459 - inicio_validacao
-[15:42:48.965] [PID 3808] [cliente-0] [PRODUTOR 0] ebdc40f1 - pedido_criado | cliente=Pedro Oliveira; item=Monitor; valor=R$ 3144.06; pedido 1/6
-[15:42:48.982] [PID 18324] [validador-1] [VALIDACAO 1] cce72a35 - inicio_validacao
-[15:42:48.991] [PID 8] [cliente-2] [PRODUTOR 2] 4b042641 - pedido_criado | cliente=Pedro Oliveira; item=Headphone; valor=R$ 552.80; pedido 1/6
-[15:42:49.031] [PID 1580] [cliente-1] [PRODUTOR 1] d8946949 - pedido_criado | cliente=João Silva; item=Webcam; valor=R$ 4298.60; pedido 2/6
-[15:42:49.051] [PID 3808] [cliente-0] [PRODUTOR 0] ca5d4c6c - pedido_criado | cliente=Maria Santos; item=Memória RAM; valor=R$ 3172.53; pedido 2/6
-[15:42:49.084] [PID 18356] [cliente-3] [PRODUTOR 3] c7fdfb16 - pedido_criado | cliente=João Silva; item=Mouse; valor=R$ 145.01; pedido 2/6
-[15:42:49.115] [PID 8] [cliente-2] [PRODUTOR 2] c8f6d88d - pedido_criado | cliente=João Silva; item=Mouse; valor=R$ 4245.15; pedido 2/6
-[15:42:49.155] [PID 3808] [cliente-0] [PRODUTOR 0] 11da4266 - pedido_criado | cliente=Maria Santos; item=Notebook; valor=R$ 3896.51; pedido 3/6
-[15:42:49.158] [PID 1580] [cliente-1] [PRODUTOR 1] e10749f1 - pedido_criado | cliente=João Silva; item=SSD; valor=R$ 3644.55; pedido 3/6
-[15:42:49.218] [PID 18356] [cliente-3] [PRODUTOR 3] c875371d - pedido_criado | cliente=Ana Costa; item=Memória RAM; valor=R$ 4718.67; pedido 3/6
-[15:42:49.228] [PID 8] [cliente-2] [PRODUTOR 2] acf097ce - pedido_criado | cliente=João Silva; item=Teclado; valor=R$ 2566.63; pedido 3/6
-[15:42:49.635] [PID 2352] [validador-0] [VALIDACAO 0] 5a75f459 - pedido_validado
-[15:42:49.636] [PID 2352] [validador-0] [VALIDACAO 0] ebdc40f1 - inicio_validacao
-[15:42:49.636] [PID 3808] [cliente-0] [PRODUTOR 0] ed26c975 - pedido_criado | cliente=João Silva; item=Mouse; valor=R$ 722.10; pedido 4/6
-[15:42:49.636] [PID 13724] [financeiro-0] [FINANCEIRO 0] 5a75f459 - inicio_financeiro
-[15:42:50.029] [PID 18324] [validador-1] [VALIDACAO 1] cce72a35 - pedido_validado
-[15:42:50.030] [PID 18324] [validador-1] [VALIDACAO 1] 4b042641 - inicio_validacao
-[15:42:50.030] [PID 1580] [cliente-1] [PRODUTOR 1] 1a48ef67 - pedido_criado | cliente=Pedro Oliveira; item=Headphone; valor=R$ 1013.56; pedido 4/6
-[15:42:50.030] [PID 2568] [financeiro-1] [FINANCEIRO 1] cce72a35 - inicio_financeiro
-[15:42:50.879] [PID 18324] [validador-1] [VALIDACAO 1] 4b042641 - pedido_validado
-[15:42:50.880] [PID 18356] [cliente-3] [PRODUTOR 3] 13fe48cc - pedido_criado | cliente=Ana Costa; item=Monitor; valor=R$ 1894.34; pedido 4/6
-[15:42:50.880] [PID 18324] [validador-1] [VALIDACAO 1] d8946949 - inicio_validacao
-[15:42:51.103] [PID 2352] [validador-0] [VALIDACAO 0] ebdc40f1 - pedido_validado
-[15:42:51.105] [PID 8] [cliente-2] [PRODUTOR 2] 6adbb09b - pedido_criado | cliente=Pedro Oliveira; item=Monitor; valor=R$ 4772.08; pedido 4/6
-[15:42:51.105] [PID 2352] [validador-0] [VALIDACAO 0] ca5d4c6c - inicio_validacao
-[15:42:51.280] [PID 2568] [financeiro-1] [FINANCEIRO 1] cce72a35 - pedido_rejeitado_financeiro
-[15:42:51.280] [PID 2568] [financeiro-1] [PEDIDO_FINALIZADO] cce72a35 - Rejeitado Financeiramente
-[15:42:51.280] [PID 2568] [financeiro-1] [FINANCEIRO 1] 4b042641 - inicio_financeiro
-[15:42:51.326] [PID 13724] [financeiro-0] [FINANCEIRO 0] 5a75f459 - pedido_rejeitado_financeiro
-[15:42:51.326] [PID 13724] [financeiro-0] [PEDIDO_FINALIZADO] 5a75f459 - Rejeitado Financeiramente
-[15:42:51.326] [PID 13724] [financeiro-0] [FINANCEIRO 0] ebdc40f1 - inicio_financeiro
-[15:42:51.711] [PID 18324] [validador-1] [VALIDACAO 1] d8946949 - pedido_validado
-[15:42:51.711] [PID 3808] [cliente-0] [PRODUTOR 0] 78eb1a14 - pedido_criado | cliente=Ana Costa; item=Notebook; valor=R$ 401.51; pedido 5/6
-[15:42:51.711] [PID 18324] [validador-1] [VALIDACAO 1] c7fdfb16 - inicio_validacao
-[15:42:52.490] [PID 2352] [validador-0] [VALIDACAO 0] ca5d4c6c - pedido_rejeitado_validacao
-[15:42:52.490] [PID 2352] [validador-0] [PEDIDO_FINALIZADO] ca5d4c6c - Rejeitado na Validação
-[15:42:52.491] [PID 1580] [cliente-1] [PRODUTOR 1] 1f5587f3 - pedido_criado | cliente=João Silva; item=Webcam; valor=R$ 593.99; pedido 5/6
-[15:42:52.491] [PID 2352] [validador-0] [VALIDACAO 0] c8f6d88d - inicio_validacao
-[15:42:52.729] [PID 2568] [financeiro-1] [FINANCEIRO 1] 4b042641 - pedido_rejeitado_financeiro
-[15:42:52.729] [PID 2568] [financeiro-1] [PEDIDO_FINALIZADO] 4b042641 - Rejeitado Financeiramente
-[15:42:52.729] [PID 2568] [financeiro-1] [FINANCEIRO 1] d8946949 - inicio_financeiro
-[15:42:53.196] [PID 13724] [financeiro-0] [FINANCEIRO 0] ebdc40f1 - pedido_aprovado_financeiro
-[15:42:53.198] [PID 9076] [logistica-1] [LOGISTICA 1] ebdc40f1 - inicio_logistica
-[15:42:53.470] [PID 18324] [validador-1] [VALIDACAO 1] c7fdfb16 - pedido_validado
-[15:42:53.470] [PID 13724] [financeiro-0] [FINANCEIRO 0] c7fdfb16 - inicio_financeiro
-[15:42:53.470] [PID 18324] [validador-1] [VALIDACAO 1] 11da4266 - inicio_validacao
-[15:42:53.470] [PID 18356] [cliente-3] [PRODUTOR 3] 4c4236da - pedido_criado | cliente=Maria Santos; item=Memória RAM; valor=R$ 2531.48; pedido 5/6
-[15:42:53.615] [PID 2568] [financeiro-1] [FINANCEIRO 1] d8946949 - pedido_aprovado_financeiro
-[15:42:53.617] [PID 8912] [logistica-0] [LOGISTICA 0] d8946949 - inicio_logistica
-[15:42:53.812] [PID 2352] [validador-0] [VALIDACAO 0] c8f6d88d - pedido_validado
-[15:42:53.813] [PID 2568] [financeiro-1] [FINANCEIRO 1] c8f6d88d - inicio_financeiro
-[15:42:53.813] [PID 2352] [validador-0] [VALIDACAO 0] e10749f1 - inicio_validacao
-[15:42:53.813] [PID 8] [cliente-2] [PRODUTOR 2] 8d33531d - pedido_criado | cliente=Pedro Oliveira; item=Headphone; valor=R$ 4124.13; pedido 5/6
-[15:42:54.461] [PID 2568] [financeiro-1] [FINANCEIRO 1] c8f6d88d - pedido_aprovado_financeiro
-[15:42:54.563] [PID 8912] [logistica-0] [LOGISTICA 0] d8946949 - pedido_entregue
-[15:42:54.563] [PID 8912] [logistica-0] [PEDIDO_FINALIZADO] d8946949 - Entregue
-[15:42:54.563] [PID 8912] [logistica-0] [LOGISTICA 0] c8f6d88d - inicio_logistica
-[15:42:54.631] [PID 9076] [logistica-1] [LOGISTICA 1] ebdc40f1 - pedido_entregue
-[15:42:54.631] [PID 9076] [logistica-1] [PEDIDO_FINALIZADO] ebdc40f1 - Entregue
-[15:42:54.866] [PID 2352] [validador-0] [VALIDACAO 0] e10749f1 - pedido_validado
-[15:42:54.866] [PID 2568] [financeiro-1] [FINANCEIRO 1] e10749f1 - inicio_financeiro
-[15:42:54.866] [PID 3808] [cliente-0] [PRODUTOR 0] 24d7e741 - pedido_criado | cliente=Pedro Oliveira; item=SSD; valor=R$ 1282.13; pedido 6/6
-[15:42:54.866] [PID 2352] [validador-0] [VALIDACAO 0] c875371d - inicio_validacao
-[15:42:55.231] [PID 13724] [financeiro-0] [FINANCEIRO 0] c7fdfb16 - pedido_aprovado_financeiro
-[15:42:55.232] [PID 9076] [logistica-1] [LOGISTICA 1] c7fdfb16 - inicio_logistica
-[15:42:55.435] [PID 18324] [validador-1] [VALIDACAO 1] 11da4266 - pedido_validado
-[15:42:55.436] [PID 1580] [cliente-1] [PRODUTOR 1] 047f8e69 - pedido_criado | cliente=Maria Santos; item=Teclado; valor=R$ 1035.25; pedido 6/6
-[15:42:55.436] [PID 18324] [validador-1] [VALIDACAO 1] acf097ce - inicio_validacao
-[15:42:55.436] [PID 13724] [financeiro-0] [FINANCEIRO 0] 11da4266 - inicio_financeiro
-[15:42:56.032] [PID 2352] [validador-0] [VALIDACAO 0] c875371d - pedido_rejeitado_validacao
-[15:42:56.032] [PID 2352] [validador-0] [PEDIDO_FINALIZADO] c875371d - Rejeitado na Validação
-[15:42:56.032] [PID 18356] [cliente-3] [PRODUTOR 3] af52d51d - pedido_criado | cliente=João Silva; item=Monitor; valor=R$ 3759.49; pedido 6/6
-[15:42:56.032] [PID 2352] [validador-0] [VALIDACAO 0] ed26c975 - inicio_validacao
-[15:42:56.145] [PID 13724] [financeiro-0] [FINANCEIRO 0] 11da4266 - pedido_aprovado_financeiro
-[15:42:56.497] [PID 8912] [logistica-0] [LOGISTICA 0] c8f6d88d - pedido_entregue
-[15:42:56.497] [PID 8912] [logistica-0] [PEDIDO_FINALIZADO] c8f6d88d - Entregue
-[15:42:56.497] [PID 8912] [logistica-0] [LOGISTICA 0] 11da4266 - inicio_logistica
-[15:42:56.647] [PID 9076] [logistica-1] [LOGISTICA 1] c7fdfb16 - pedido_entregue
-[15:42:56.647] [PID 9076] [logistica-1] [PEDIDO_FINALIZADO] c7fdfb16 - Entregue
-[15:42:56.680] [PID 2568] [financeiro-1] [FINANCEIRO 1] e10749f1 - pedido_aprovado_financeiro
-[15:42:56.681] [PID 9076] [logistica-1] [LOGISTICA 1] e10749f1 - inicio_logistica
-[15:42:56.960] [PID 18324] [validador-1] [VALIDACAO 1] acf097ce - pedido_validado
-[15:42:56.960] [PID 8] [cliente-2] [PRODUTOR 2] 6794b546 - pedido_criado | cliente=Maria Santos; item=Notebook; valor=R$ 1802.27; pedido 6/6
-[15:42:56.960] [PID 13724] [financeiro-0] [FINANCEIRO 0] acf097ce - inicio_financeiro
-[15:42:56.961] [PID 18324] [validador-1] [VALIDACAO 1] 1a48ef67 - inicio_validacao
-[15:42:57.538] [PID 9076] [logistica-1] [LOGISTICA 1] e10749f1 - pedido_entregue
-[15:42:57.539] [PID 9076] [logistica-1] [PEDIDO_FINALIZADO] e10749f1 - Entregue
-[15:42:57.681] [PID 8912] [logistica-0] [LOGISTICA 0] 11da4266 - pedido_entregue
-[15:42:57.681] [PID 8912] [logistica-0] [PEDIDO_FINALIZADO] 11da4266 - Entregue
-[15:42:57.693] [PID 18324] [validador-1] [VALIDACAO 1] 1a48ef67 - pedido_rejeitado_validacao
-[15:42:57.693] [PID 18324] [validador-1] [PEDIDO_FINALIZADO] 1a48ef67 - Rejeitado na Validação
-[15:42:57.693] [PID 18324] [validador-1] [VALIDACAO 1] 13fe48cc - inicio_validacao
-[15:42:57.951] [PID 2352] [validador-0] [VALIDACAO 0] ed26c975 - pedido_validado
-[15:42:57.951] [PID 2352] [validador-0] [VALIDACAO 0] 6adbb09b - inicio_validacao
-[15:42:57.951] [PID 2568] [financeiro-1] [FINANCEIRO 1] ed26c975 - inicio_financeiro
-[15:42:58.432] [PID 13724] [financeiro-0] [FINANCEIRO 0] acf097ce - pedido_aprovado_financeiro
-[15:42:58.433] [PID 9076] [logistica-1] [LOGISTICA 1] acf097ce - inicio_logistica
-[15:42:59.080] [PID 18324] [validador-1] [VALIDACAO 1] 13fe48cc - pedido_validado
-[15:42:59.081] [PID 18324] [validador-1] [VALIDACAO 1] 78eb1a14 - inicio_validacao
-[15:42:59.081] [PID 13724] [financeiro-0] [FINANCEIRO 0] 13fe48cc - inicio_financeiro
-[15:42:59.695] [PID 2568] [financeiro-1] [FINANCEIRO 1] ed26c975 - pedido_rejeitado_financeiro
-[15:42:59.695] [PID 2568] [financeiro-1] [PEDIDO_FINALIZADO] ed26c975 - Rejeitado Financeiramente
-[15:42:59.882] [PID 9076] [logistica-1] [LOGISTICA 1] acf097ce - pedido_entregue
-[15:42:59.882] [PID 9076] [logistica-1] [PEDIDO_FINALIZADO] acf097ce - Entregue
-[15:42:59.928] [PID 2352] [validador-0] [VALIDACAO 0] 6adbb09b - pedido_validado
-[15:42:59.929] [PID 2352] [validador-0] [VALIDACAO 0] 1f5587f3 - inicio_validacao
-[15:42:59.929] [PID 2568] [financeiro-1] [FINANCEIRO 1] 6adbb09b - inicio_financeiro
-[15:43:00.241] [PID 18324] [validador-1] [VALIDACAO 1] 78eb1a14 - pedido_validado
-[15:43:00.241] [PID 18324] [validador-1] [VALIDACAO 1] 4c4236da - inicio_validacao
-[15:43:00.479] [PID 2568] [financeiro-1] [FINANCEIRO 1] 6adbb09b - pedido_rejeitado_financeiro
-[15:43:00.479] [PID 2568] [financeiro-1] [PEDIDO_FINALIZADO] 6adbb09b - Rejeitado Financeiramente
-[15:43:00.479] [PID 2568] [financeiro-1] [FINANCEIRO 1] 78eb1a14 - inicio_financeiro
-[15:43:00.659] [PID 2352] [validador-0] [VALIDACAO 0] 1f5587f3 - pedido_rejeitado_validacao
-[15:43:00.659] [PID 2352] [validador-0] [PEDIDO_FINALIZADO] 1f5587f3 - Rejeitado na Validação
-[15:43:00.660] [PID 2352] [validador-0] [VALIDACAO 0] 8d33531d - inicio_validacao
-[15:43:00.714] [PID 13724] [financeiro-0] [FINANCEIRO 0] 13fe48cc - pedido_aprovado_financeiro
-[15:43:00.714] [PID 8912] [logistica-0] [LOGISTICA 0] 13fe48cc - inicio_logistica
-[15:43:01.255] [PID 2568] [financeiro-1] [FINANCEIRO 1] 78eb1a14 - pedido_aprovado_financeiro
-[15:43:01.255] [PID 9076] [logistica-1] [LOGISTICA 1] 78eb1a14 - inicio_logistica
-[15:43:01.279] [PID 18324] [validador-1] [VALIDACAO 1] 4c4236da - pedido_validado
-[15:43:01.279] [PID 13724] [financeiro-0] [FINANCEIRO 0] 4c4236da - inicio_financeiro
-[15:43:01.279] [PID 18324] [validador-1] [VALIDACAO 1] 24d7e741 - inicio_validacao
-[15:43:02.184] [PID 2352] [validador-0] [VALIDACAO 0] 8d33531d - pedido_validado
-[15:43:02.186] [PID 2568] [financeiro-1] [FINANCEIRO 1] 8d33531d - inicio_financeiro
-[15:43:02.186] [PID 2352] [validador-0] [VALIDACAO 0] 047f8e69 - inicio_validacao
-[15:43:02.200] [PID 8912] [logistica-0] [LOGISTICA 0] 13fe48cc - pedido_entregue
-[15:43:02.200] [PID 8912] [logistica-0] [PEDIDO_FINALIZADO] 13fe48cc - Entregue
-[15:43:02.468] [PID 18324] [validador-1] [VALIDACAO 1] 24d7e741 - pedido_rejeitado_validacao
-[15:43:02.468] [PID 18324] [validador-1] [PEDIDO_FINALIZADO] 24d7e741 - Rejeitado na Validação
-[15:43:02.469] [PID 18324] [validador-1] [VALIDACAO 1] af52d51d - inicio_validacao
-[15:43:02.694] [PID 2352] [validador-0] [VALIDACAO 0] 047f8e69 - pedido_rejeitado_validacao
-[15:43:02.694] [PID 2352] [validador-0] [PEDIDO_FINALIZADO] 047f8e69 - Rejeitado na Validação
-[15:43:02.696] [PID 2352] [validador-0] [VALIDACAO 0] 6794b546 - inicio_validacao
-[15:43:02.974] [PID 13724] [financeiro-0] [FINANCEIRO 0] 4c4236da - pedido_aprovado_financeiro
-[15:43:02.976] [PID 8912] [logistica-0] [LOGISTICA 0] 4c4236da - inicio_logistica
-[15:43:02.984] [PID 18324] [validador-1] [VALIDACAO 1] af52d51d - pedido_validado
-[15:43:02.984] [PID 13724] [financeiro-0] [FINANCEIRO 0] af52d51d - inicio_financeiro
-[15:43:03.086] [PID 9076] [logistica-1] [LOGISTICA 1] 78eb1a14 - pedido_entregue
-[15:43:03.086] [PID 9076] [logistica-1] [PEDIDO_FINALIZADO] 78eb1a14 - Entregue
-[15:43:03.130] [PID 2568] [financeiro-1] [FINANCEIRO 1] 8d33531d - pedido_aprovado_financeiro
-[15:43:03.130] [PID 9076] [logistica-1] [LOGISTICA 1] 8d33531d - inicio_logistica
-[15:43:03.587] [PID 13724] [financeiro-0] [FINANCEIRO 0] af52d51d - pedido_rejeitado_financeiro
-[15:43:03.587] [PID 13724] [financeiro-0] [PEDIDO_FINALIZADO] af52d51d - Rejeitado Financeiramente
-[15:43:04.025] [PID 9076] [logistica-1] [LOGISTICA 1] 8d33531d - pedido_entregue
-[15:43:04.026] [PID 9076] [logistica-1] [PEDIDO_FINALIZADO] 8d33531d - Entregue
-[15:43:04.397] [PID 2352] [validador-0] [VALIDACAO 0] 6794b546 - pedido_rejeitado_validacao
-[15:43:04.397] [PID 2352] [validador-0] [PEDIDO_FINALIZADO] 6794b546 - Rejeitado na Validação
-[15:43:04.561] [PID 8912] [logistica-0] [LOGISTICA 0] 4c4236da - pedido_entregue
-[15:43:04.562] [PID 8912] [logistica-0] [PEDIDO_FINALIZADO] 4c4236da - Entregue
-[15:43:04.574] [PID 16932] [monitor-active-object] [MONITOR] Active Object finalizado
+[16:17:27.744] [PID 292408] [monitor-active-object] [MONITOR] Active Object iniciado
+[16:17:27.746] [PID 292409] [cliente-0] [PRODUTOR 0] f624ba00 - pedido_criado | cliente=Pedro Oliveira; item=Monitor; valor=R$ 1827.06; pedido 1/6
+[16:17:27.747] [PID 292410] [cliente-1] [PRODUTOR 1] 30d9f42c - pedido_criado | cliente=Maria Santos; item=Mouse; valor=R$ 3235.31; pedido 1/6
+[16:17:27.749] [PID 292411] [cliente-2] [PRODUTOR 2] e01b8906 - pedido_criado | cliente=Pedro Oliveira; item=SSD; valor=R$ 3490.75; pedido 1/6
+[16:17:27.749] [PID 292414] [cliente-3] [PRODUTOR 3] afbb29f6 - pedido_criado | cliente=Ana Costa; item=Memória RAM; valor=R$ 3101.52; pedido 1/6
+[16:17:27.751] [PID 292417] [validador-0] [VALIDACAO 0] f624ba00 - inicio_validacao
+[16:17:27.752] [PID 292422] [validador-1] [VALIDACAO 1] 30d9f42c - inicio_validacao
+[16:17:27.815] [PID 292410] [cliente-1] [PRODUTOR 1] 7f5a212c - pedido_criado | cliente=Pedro Oliveira; item=Notebook; valor=R$ 4695.26; pedido 2/6
+[16:17:27.818] [PID 292409] [cliente-0] [PRODUTOR 0] 42c1be68 - pedido_criado | cliente=Ana Costa; item=Notebook; valor=R$ 1079.22; pedido 2/6
+[16:17:27.849] [PID 292411] [cliente-2] [PRODUTOR 2] c62920a0 - pedido_criado | cliente=Maria Santos; item=Webcam; valor=R$ 1302.98; pedido 2/6
+[16:17:27.879] [PID 292414] [cliente-3] [PRODUTOR 3] 3c7eb024 - pedido_criado | cliente=Pedro Oliveira; item=Memória RAM; valor=R$ 2031.94; pedido 2/6
+[16:17:27.905] [PID 292410] [cliente-1] [PRODUTOR 1] f79738b2 - pedido_criado | cliente=Pedro Oliveira; item=SSD; valor=R$ 755.16; pedido 3/6
+[16:17:27.946] [PID 292411] [cliente-2] [PRODUTOR 2] 0c7d9858 - pedido_criado | cliente=Ana Costa; item=SSD; valor=R$ 4686.79; pedido 3/6
+[16:17:27.946] [PID 292409] [cliente-0] [PRODUTOR 0] 36fa40a2 - pedido_criado | cliente=Ana Costa; item=Webcam; valor=R$ 2432.91; pedido 3/6
+[16:17:27.959] [PID 292414] [cliente-3] [PRODUTOR 3] 7ab531d5 - pedido_criado | cliente=Ana Costa; item=Teclado; valor=R$ 243.19; pedido 3/6
+[16:17:28.828] [PID 292417] [validador-0] [VALIDACAO 0] f624ba00 - pedido_rejeitado_validacao
+[16:17:28.828] [PID 292417] [validador-0] [PEDIDO_FINALIZADO] f624ba00 - Rejeitado na Validação
+[16:17:28.828] [PID 292417] [validador-0] [VALIDACAO 0] e01b8906 - inicio_validacao
+[16:17:28.829] [PID 292410] [cliente-1] [PRODUTOR 1] 6037a748 - pedido_criado | cliente=Ana Costa; item=Mouse; valor=R$ 3081.20; pedido 4/6
+[16:17:29.169] [PID 292422] [validador-1] [VALIDACAO 1] 30d9f42c - pedido_validado
+[16:17:29.170] [PID 292422] [validador-1] [VALIDACAO 1] afbb29f6 - inicio_validacao
+[16:17:29.170] [PID 292409] [cliente-0] [PRODUTOR 0] 152ba088 - pedido_criado | cliente=Maria Santos; item=Teclado; valor=R$ 2123.75; pedido 4/6
+[16:17:29.171] [PID 292424] [financeiro-0] [FINANCEIRO 0] 30d9f42c - inicio_financeiro
+[16:17:30.074] [PID 292417] [validador-0] [VALIDACAO 0] e01b8906 - pedido_validado
+[16:17:30.075] [PID 292417] [validador-0] [VALIDACAO 0] 7f5a212c - inicio_validacao
+[16:17:30.075] [PID 292411] [cliente-2] [PRODUTOR 2] 39e78f3c - pedido_criado | cliente=Ana Costa; item=Monitor; valor=R$ 4374.67; pedido 4/6
+[16:17:30.075] [PID 292426] [financeiro-1] [FINANCEIRO 1] e01b8906 - inicio_financeiro
+[16:17:31.037] [PID 292422] [validador-1] [VALIDACAO 1] afbb29f6 - pedido_rejeitado_validacao
+[16:17:31.037] [PID 292422] [validador-1] [PEDIDO_FINALIZADO] afbb29f6 - Rejeitado na Validação
+[16:17:31.037] [PID 292424] [financeiro-0] [FINANCEIRO 0] 30d9f42c - pedido_aprovado_financeiro
+[16:17:31.038] [PID 292422] [validador-1] [VALIDACAO 1] 42c1be68 - inicio_validacao
+[16:17:31.038] [PID 292414] [cliente-3] [PRODUTOR 3] 7daaa694 - pedido_criado | cliente=Pedro Oliveira; item=Webcam; valor=R$ 3868.65; pedido 4/6
+[16:17:31.039] [PID 292427] [logistica-0] [LOGISTICA 0] 30d9f42c - inicio_logistica
+[16:17:31.286] [PID 292426] [financeiro-1] [FINANCEIRO 1] e01b8906 - pedido_aprovado_financeiro
+[16:17:31.288] [PID 292428] [logistica-1] [LOGISTICA 1] e01b8906 - inicio_logistica
+[16:17:31.720] [PID 292427] [logistica-0] [LOGISTICA 0] 30d9f42c - pedido_entregue
+[16:17:31.720] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] 30d9f42c - Entregue
+[16:17:32.007] [PID 292428] [logistica-1] [LOGISTICA 1] e01b8906 - pedido_entregue
+[16:17:32.007] [PID 292428] [logistica-1] [PEDIDO_FINALIZADO] e01b8906 - Entregue
+[16:17:32.059] [PID 292417] [validador-0] [VALIDACAO 0] 7f5a212c - pedido_validado
+[16:17:32.059] [PID 292410] [cliente-1] [PRODUTOR 1] 82017e9e - pedido_criado | cliente=Maria Santos; item=SSD; valor=R$ 4694.61; pedido 5/6
+[16:17:32.059] [PID 292417] [validador-0] [VALIDACAO 0] c62920a0 - inicio_validacao
+[16:17:32.059] [PID 292424] [financeiro-0] [FINANCEIRO 0] 7f5a212c - inicio_financeiro
+[16:17:32.351] [PID 292422] [validador-1] [VALIDACAO 1] 42c1be68 - pedido_validado
+[16:17:32.352] [PID 292422] [validador-1] [VALIDACAO 1] 3c7eb024 - inicio_validacao
+[16:17:32.352] [PID 292409] [cliente-0] [PRODUTOR 0] 8b3ed8b3 - pedido_criado | cliente=Pedro Oliveira; item=Monitor; valor=R$ 4454.10; pedido 5/6
+[16:17:32.352] [PID 292426] [financeiro-1] [FINANCEIRO 1] 42c1be68 - inicio_financeiro
+[16:17:33.110] [PID 292424] [financeiro-0] [FINANCEIRO 0] 7f5a212c - pedido_aprovado_financeiro
+[16:17:33.111] [PID 292427] [logistica-0] [LOGISTICA 0] 7f5a212c - inicio_logistica
+[16:17:33.125] [PID 292422] [validador-1] [VALIDACAO 1] 3c7eb024 - pedido_rejeitado_validacao
+[16:17:33.125] [PID 292422] [validador-1] [PEDIDO_FINALIZADO] 3c7eb024 - Rejeitado na Validação
+[16:17:33.126] [PID 292422] [validador-1] [VALIDACAO 1] f79738b2 - inicio_validacao
+[16:17:33.126] [PID 292411] [cliente-2] [PRODUTOR 2] 32c117e6 - pedido_criado | cliente=João Silva; item=Headphone; valor=R$ 4858.66; pedido 5/6
+[16:17:33.129] [PID 292426] [financeiro-1] [FINANCEIRO 1] 42c1be68 - pedido_rejeitado_financeiro
+[16:17:33.129] [PID 292426] [financeiro-1] [PEDIDO_FINALIZADO] 42c1be68 - Rejeitado Financeiramente
+[16:17:33.266] [PID 292414] [cliente-3] [PRODUTOR 3] 25467b0e - pedido_criado | cliente=Pedro Oliveira; item=Notebook; valor=R$ 4433.60; pedido 5/6
+[16:17:33.266] [PID 292417] [validador-0] [VALIDACAO 0] c62920a0 - pedido_validado
+[16:17:33.266] [PID 292417] [validador-0] [VALIDACAO 0] 0c7d9858 - inicio_validacao
+[16:17:33.267] [PID 292424] [financeiro-0] [FINANCEIRO 0] c62920a0 - inicio_financeiro
+[16:17:34.066] [PID 292427] [logistica-0] [LOGISTICA 0] 7f5a212c - pedido_entregue
+[16:17:34.066] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] 7f5a212c - Entregue
+[16:17:34.493] [PID 292417] [validador-0] [VALIDACAO 0] 0c7d9858 - pedido_validado
+[16:17:34.494] [PID 292417] [validador-0] [VALIDACAO 0] 36fa40a2 - inicio_validacao
+[16:17:34.494] [PID 292426] [financeiro-1] [FINANCEIRO 1] 0c7d9858 - inicio_financeiro
+[16:17:34.494] [PID 292410] [cliente-1] [PRODUTOR 1] 1f368770 - pedido_criado | cliente=Ana Costa; item=Mouse; valor=R$ 1581.98; pedido 6/6
+[16:17:35.001] [PID 292422] [validador-1] [VALIDACAO 1] f79738b2 - pedido_validado
+[16:17:35.002] [PID 292422] [validador-1] [VALIDACAO 1] 7ab531d5 - inicio_validacao
+[16:17:35.002] [PID 292409] [cliente-0] [PRODUTOR 0] b89afc54 - pedido_criado | cliente=Maria Santos; item=SSD; valor=R$ 426.88; pedido 6/6
+[16:17:35.085] [PID 292424] [financeiro-0] [FINANCEIRO 0] c62920a0 - pedido_aprovado_financeiro
+[16:17:35.086] [PID 292424] [financeiro-0] [FINANCEIRO 0] f79738b2 - inicio_financeiro
+[16:17:35.086] [PID 292428] [logistica-1] [LOGISTICA 1] c62920a0 - inicio_logistica
+[16:17:35.607] [PID 292426] [financeiro-1] [FINANCEIRO 1] 0c7d9858 - pedido_aprovado_financeiro
+[16:17:35.607] [PID 292427] [logistica-0] [LOGISTICA 0] 0c7d9858 - inicio_logistica
+[16:17:36.100] [PID 292428] [logistica-1] [LOGISTICA 1] c62920a0 - falha_entrega
+[16:17:36.100] [PID 292428] [logistica-1] [PEDIDO_FINALIZADO] c62920a0 - Falha na Entrega
+[16:17:36.147] [PID 292427] [logistica-0] [LOGISTICA 0] 0c7d9858 - falha_entrega
+[16:17:36.147] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] 0c7d9858 - Falha na Entrega
+[16:17:36.266] [PID 292417] [validador-0] [VALIDACAO 0] 36fa40a2 - pedido_validado
+[16:17:36.267] [PID 292417] [validador-0] [VALIDACAO 0] 6037a748 - inicio_validacao
+[16:17:36.267] [PID 292426] [financeiro-1] [FINANCEIRO 1] 36fa40a2 - inicio_financeiro
+[16:17:36.267] [PID 292411] [cliente-2] [PRODUTOR 2] 6ac9ef61 - pedido_criado | cliente=João Silva; item=Memória RAM; valor=R$ 4898.98; pedido 6/6
+[16:17:36.346] [PID 292424] [financeiro-0] [FINANCEIRO 0] f79738b2 - pedido_rejeitado_financeiro
+[16:17:36.347] [PID 292424] [financeiro-0] [PEDIDO_FINALIZADO] f79738b2 - Rejeitado Financeiramente
+[16:17:36.474] [PID 292422] [validador-1] [VALIDACAO 1] 7ab531d5 - pedido_validado
+[16:17:36.474] [PID 292414] [cliente-3] [PRODUTOR 3] 8006fd5a - pedido_criado | cliente=Ana Costa; item=Webcam; valor=R$ 3358.00; pedido 6/6
+[16:17:36.474] [PID 292422] [validador-1] [VALIDACAO 1] 152ba088 - inicio_validacao
+[16:17:36.474] [PID 292424] [financeiro-0] [FINANCEIRO 0] 7ab531d5 - inicio_financeiro
+[16:17:37.557] [PID 292424] [financeiro-0] [FINANCEIRO 0] 7ab531d5 - pedido_aprovado_financeiro
+[16:17:37.558] [PID 292428] [logistica-1] [LOGISTICA 1] 7ab531d5 - inicio_logistica
+[16:17:37.663] [PID 292426] [financeiro-1] [FINANCEIRO 1] 36fa40a2 - pedido_aprovado_financeiro
+[16:17:37.663] [PID 292427] [logistica-0] [LOGISTICA 0] 36fa40a2 - inicio_logistica
+[16:17:37.696] [PID 292422] [validador-1] [VALIDACAO 1] 152ba088 - pedido_rejeitado_validacao
+[16:17:37.696] [PID 292422] [validador-1] [PEDIDO_FINALIZADO] 152ba088 - Rejeitado na Validação
+[16:17:37.696] [PID 292422] [validador-1] [VALIDACAO 1] 39e78f3c - inicio_validacao
+[16:17:38.033] [PID 292417] [validador-0] [VALIDACAO 0] 6037a748 - pedido_rejeitado_validacao
+[16:17:38.033] [PID 292417] [validador-0] [PEDIDO_FINALIZADO] 6037a748 - Rejeitado na Validação
+[16:17:38.033] [PID 292417] [validador-0] [VALIDACAO 0] 7daaa694 - inicio_validacao
+[16:17:38.269] [PID 292427] [logistica-0] [LOGISTICA 0] 36fa40a2 - pedido_entregue
+[16:17:38.269] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] 36fa40a2 - Entregue
+[16:17:38.336] [PID 292428] [logistica-1] [LOGISTICA 1] 7ab531d5 - pedido_entregue
+[16:17:38.337] [PID 292428] [logistica-1] [PEDIDO_FINALIZADO] 7ab531d5 - Entregue
+[16:17:38.555] [PID 292417] [validador-0] [VALIDACAO 0] 7daaa694 - pedido_validado
+[16:17:38.556] [PID 292424] [financeiro-0] [FINANCEIRO 0] 7daaa694 - inicio_financeiro
+[16:17:38.556] [PID 292417] [validador-0] [VALIDACAO 0] 82017e9e - inicio_validacao
+[16:17:38.720] [PID 292422] [validador-1] [VALIDACAO 1] 39e78f3c - pedido_validado
+[16:17:38.721] [PID 292422] [validador-1] [VALIDACAO 1] 8b3ed8b3 - inicio_validacao
+[16:17:38.721] [PID 292426] [financeiro-1] [FINANCEIRO 1] 39e78f3c - inicio_financeiro
+[16:17:39.106] [PID 292424] [financeiro-0] [FINANCEIRO 0] 7daaa694 - pedido_aprovado_financeiro
+[16:17:39.107] [PID 292427] [logistica-0] [LOGISTICA 0] 7daaa694 - inicio_logistica
+[16:17:39.545] [PID 292422] [validador-1] [VALIDACAO 1] 8b3ed8b3 - pedido_validado
+[16:17:39.546] [PID 292424] [financeiro-0] [FINANCEIRO 0] 8b3ed8b3 - inicio_financeiro
+[16:17:39.546] [PID 292422] [validador-1] [VALIDACAO 1] 32c117e6 - inicio_validacao
+[16:17:39.912] [PID 292417] [validador-0] [VALIDACAO 0] 82017e9e - pedido_rejeitado_validacao
+[16:17:39.912] [PID 292417] [validador-0] [PEDIDO_FINALIZADO] 82017e9e - Rejeitado na Validação
+[16:17:39.912] [PID 292417] [validador-0] [VALIDACAO 0] 25467b0e - inicio_validacao
+[16:17:40.164] [PID 292424] [financeiro-0] [FINANCEIRO 0] 8b3ed8b3 - pedido_aprovado_financeiro
+[16:17:40.164] [PID 292428] [logistica-1] [LOGISTICA 1] 8b3ed8b3 - inicio_logistica
+[16:17:40.214] [PID 292427] [logistica-0] [LOGISTICA 0] 7daaa694 - pedido_entregue
+[16:17:40.214] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] 7daaa694 - Entregue
+[16:17:40.296] [PID 292426] [financeiro-1] [FINANCEIRO 1] 39e78f3c - pedido_aprovado_financeiro
+[16:17:40.296] [PID 292427] [logistica-0] [LOGISTICA 0] 39e78f3c - inicio_logistica
+[16:17:40.542] [PID 292422] [validador-1] [VALIDACAO 1] 32c117e6 - pedido_rejeitado_validacao
+[16:17:40.543] [PID 292422] [validador-1] [PEDIDO_FINALIZADO] 32c117e6 - Rejeitado na Validação
+[16:17:40.543] [PID 292422] [validador-1] [VALIDACAO 1] 1f368770 - inicio_validacao
+[16:17:40.892] [PID 292428] [logistica-1] [LOGISTICA 1] 8b3ed8b3 - pedido_entregue
+[16:17:40.892] [PID 292428] [logistica-1] [PEDIDO_FINALIZADO] 8b3ed8b3 - Entregue
+[16:17:40.984] [PID 292427] [logistica-0] [LOGISTICA 0] 39e78f3c - falha_entrega
+[16:17:40.984] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] 39e78f3c - Falha na Entrega
+[16:17:41.231] [PID 292417] [validador-0] [VALIDACAO 0] 25467b0e - pedido_validado
+[16:17:41.231] [PID 292417] [validador-0] [VALIDACAO 0] b89afc54 - inicio_validacao
+[16:17:41.232] [PID 292424] [financeiro-0] [FINANCEIRO 0] 25467b0e - inicio_financeiro
+[16:17:42.507] [PID 292422] [validador-1] [VALIDACAO 1] 1f368770 - pedido_rejeitado_validacao
+[16:17:42.507] [PID 292422] [validador-1] [PEDIDO_FINALIZADO] 1f368770 - Rejeitado na Validação
+[16:17:42.507] [PID 292422] [validador-1] [VALIDACAO 1] 6ac9ef61 - inicio_validacao
+[16:17:42.642] [PID 292417] [validador-0] [VALIDACAO 0] b89afc54 - pedido_validado
+[16:17:42.642] [PID 292417] [validador-0] [VALIDACAO 0] 8006fd5a - inicio_validacao
+[16:17:42.642] [PID 292426] [financeiro-1] [FINANCEIRO 1] b89afc54 - inicio_financeiro
+[16:17:42.806] [PID 292424] [financeiro-0] [FINANCEIRO 0] 25467b0e - pedido_aprovado_financeiro
+[16:17:42.806] [PID 292428] [logistica-1] [LOGISTICA 1] 25467b0e - inicio_logistica
+[16:17:43.391] [PID 292428] [logistica-1] [LOGISTICA 1] 25467b0e - pedido_entregue
+[16:17:43.392] [PID 292428] [logistica-1] [PEDIDO_FINALIZADO] 25467b0e - Entregue
+[16:17:43.479] [PID 292426] [financeiro-1] [FINANCEIRO 1] b89afc54 - pedido_aprovado_financeiro
+[16:17:43.479] [PID 292427] [logistica-0] [LOGISTICA 0] b89afc54 - inicio_logistica
+[16:17:43.682] [PID 292422] [validador-1] [VALIDACAO 1] 6ac9ef61 - pedido_validado
+[16:17:43.683] [PID 292424] [financeiro-0] [FINANCEIRO 0] 6ac9ef61 - inicio_financeiro
+[16:17:43.838] [PID 292417] [validador-0] [VALIDACAO 0] 8006fd5a - pedido_rejeitado_validacao
+[16:17:43.838] [PID 292417] [validador-0] [PEDIDO_FINALIZADO] 8006fd5a - Rejeitado na Validação
+[16:17:44.131] [PID 292427] [logistica-0] [LOGISTICA 0] b89afc54 - pedido_entregue
+[16:17:44.131] [PID 292427] [logistica-0] [PEDIDO_FINALIZADO] b89afc54 - Entregue
+[16:17:44.986] [PID 292424] [financeiro-0] [FINANCEIRO 0] 6ac9ef61 - pedido_aprovado_financeiro
+[16:17:44.987] [PID 292428] [logistica-1] [LOGISTICA 1] 6ac9ef61 - inicio_logistica
+[16:17:46.434] [PID 292428] [logistica-1] [LOGISTICA 1] 6ac9ef61 - pedido_entregue
+[16:17:46.434] [PID 292428] [logistica-1] [PEDIDO_FINALIZADO] 6ac9ef61 - Entregue
+[16:17:46.438] [PID 292408] [monitor-active-object] [MONITOR] Active Object finalizado
 Total de pedidos finalizados: 24
-Contadores por status: {'Rejeitado Financeiramente': 6, 'Rejeitado na Validação': 7, 'Entregue': 11}
+Contadores por status: {'Rejeitado na Validação': 9, 'Entregue': 10, 'Rejeitado Financeiramente': 2, 'Falha na Entrega': 3}
 Relatório JSON: sistema_vendas.json

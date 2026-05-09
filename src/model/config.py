@@ -4,19 +4,7 @@ from typing import Dict, List
 
 @dataclass
 class ConfiguracaoSistema:
-    """
-    Configurações do sistema de vendas paralelo.
-
-    Controla:
-    - Número de workers em cada etapa (Worker Pool)
-    - Taxas de falha em cada validação
-    - Número de clientes e pedidos
-    - Tamanho das filas/buffers do padrão Produtor/Consumidor
-    - Tempos de processamento simulados
-    - Arquivo de log/relatório
-    """
-
-    # quantos workers por etapa
+    #quantos workers por etapa
     num_validadores: int                = 2
     num_financeiros: int                = 2
     num_logisticos: int                 = 2
@@ -48,20 +36,20 @@ class ConfiguracaoSistema:
         "Webcam",
         "Headphone",
         "SSD",
-        "Memória RAM",
+        "Memória RAM"
     ])
     
     nomes_clientes: List[str] = field(default_factory=lambda:[
         "João Silva",
         "Maria Santos",
         "Pedro Oliveira",
-        "Ana Costa",
+        "Ana Costa"
     ])
 
     def __post_init__(self):
-        self._validar()
+        self.validar()
 
-    def _validar(self):
+    def validar(self):
         """Valida configurações para falhar cedo, antes de iniciar processos."""
         if self.num_clientes <= 0:
             raise ValueError("num_clientes deve ser maior que zero")

@@ -52,7 +52,7 @@ class Pedido:
             "valor": self.valor,
             "status": self.status.value,
             "timestamp_criacao": self.timestamp_criacao.isoformat(),
-            "timestamps": {k: v.isoformat() for k, v in self.timestamps.items()},
+            "timestamps": {k: v.isoformat() for k, v in self.timestamps.items()}
         }
 
     def __str__(self):
@@ -65,4 +65,4 @@ class Pedido:
 def criar_pedido(cliente_id: str, nome_cliente: str, item: str, valor: float, config=None) -> Pedido:
     pedido_id = str(uuid.uuid4())[:8]
 
-    return Pedido(id=pedido_id, cliente_id=cliente_id, nome_cliente=nome_cliente, item=item, valor=valor,)
+    return Pedido(id=pedido_id, cliente_id=cliente_id, nome_cliente=nome_cliente, item=item, valor=valor)

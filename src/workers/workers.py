@@ -15,7 +15,6 @@ def timestamp() -> str:
 
 
 def log(etapa: str, worker_id: int, mensagem: str):
-    """Log padronizado: timestamp + PID + nome do processo + worker."""
     print(
         f"[{timestamp()}] "
         f"[PID {os.getpid()}] "
@@ -25,13 +24,11 @@ def log(etapa: str, worker_id: int, mensagem: str):
         flush=True
     )
 
-
 def tempo_processamento(config: ConfiguracaoSistema):
     time.sleep(random.uniform(config.tempo_processamento_min, config.tempo_processamento_max))
 
 
 def cliente_worker(cliente_id: int, config: ConfiguracaoSistema, fila_saida: Queue, fila_monitor: Optional[Queue] = None):
-    """Produz pedidos e coloca na fila inicial do pipeline."""
     try:
         for num_pedido in range(config.pedidos_por_cliente):
             item = random.choice(config.itens_disponiveis)
