@@ -6,8 +6,6 @@ from src.view.monitor import MonitorSistema
 from src.workers.workers import cliente_worker, financeiro_worker, logistica_worker, validador_worker
 
 class Orquestrador:
-    """Orquestra o sistema paralelo de vendas."""
-
     def __init__(self, config: ConfiguracaoSistema = None):
         self.config = config or ConfiguracaoSistema()
 
@@ -16,7 +14,6 @@ class Orquestrador:
         self.fila_aprovados = Queue(maxsize=self.config.tamanho_fila)
         self.monitor = MonitorSistema(arquivo_log=self.config.arquivo_log, total_esperado=self.config.total_pedidos_esperados())
         self.fila_monitor = self.monitor.fila_eventos
-
         self.processos: List[Process] = []
 
     def iniciar_sistema(self):
@@ -57,14 +54,12 @@ class Orquestrador:
         return [p for p in self.processos if p.name.startswith(prefixo)]
 
     def join_e_verificar(self, prefixo: str):
-        """Aguarda processos de um grupo e falha se algum terminou com erro."""
         for p in self.processos_por_nome(prefixo):
             p.join()
             if p.exitcode != 0:
                 raise RuntimeError(f"Processo {p.name} terminou com erro. exitcode={p.exitcode}")
 
     def aguardar_conclusao(self):
-        """Aguarda que todos os processos terminem, respeitando o pipeline."""
         print("Aguardando conclusão...\n")
 
         self.join_e_verificar("cliente")
@@ -84,7 +79,6 @@ class Orquestrador:
         print("\nTodos os processos de trabalho concluídos")
 
     def parar_sistema(self):
-        """Para workers e monitor em caso de erro/interrupção."""
         print("\nParando sistema...")
         for p in self.processos:
             if p.is_alive():
@@ -97,7 +91,6 @@ class Orquestrador:
             self.monitor.parar_forcado()
 
     def executar(self):
-        """Executa o sistema completo."""
         try:
             self.iniciar_sistema()
             self.aguardar_conclusao()

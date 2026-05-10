@@ -27,38 +27,20 @@ def escrever_linha_log(arquivo_log: str, linha: str):
 
 
 def cabecalho_mensagem(mensagem: dict) -> str:
-    return (
-        f"[{mensagem.get('timestamp', timestamp())}] "
-        f"[PID {mensagem.get('pid', '-')}] "
-        f"[{mensagem.get('processo', '-')}]"
-    )
-
+    return (f"[{mensagem.get('timestamp', timestamp())}] " f"[PID {mensagem.get('pid', '-')}] " f"[{mensagem.get('processo', '-')}]")
 
 def prefixo_monitor() -> str:
-    return (
-        f"[{timestamp()}] "
-        f"[PID {os.getpid()}] "
-        f"[{current_process().name}] "
-        f"[MONITOR]"
-    )
-
+    return (f"[{timestamp()}] "f"[PID {os.getpid()}] " f"[{current_process().name}] " f"[MONITOR]")
 
 def mensagem_base(tipo: str) -> dict:
-    return {
-        "tipo": tipo,
-        "timestamp": timestamp(),
-        "pid": os.getpid(),
-        "processo": current_process().name
-    }
+    return {"tipo": tipo,"timestamp": timestamp(), "pid": os.getpid(), "processo": current_process().name}
 
 
 def formatar_evento(mensagem: dict) -> str:
-    linha = (
-        f"{cabecalho_mensagem(mensagem)} "
-        f"[{str(mensagem.get('etapa', '')).upper()} {mensagem.get('worker_id', '-')}] "
-        f"{mensagem.get('pedido_id', '-')} - "
-        f"{mensagem.get('evento', '')}"
-    )
+    linha = (f"{cabecalho_mensagem(mensagem)} " 
+            f"[{str(mensagem.get('etapa', '')).upper()} {mensagem.get('worker_id', '-')}] " 
+            f"{mensagem.get('pedido_id', '-')} - " 
+            f"{mensagem.get('evento', '')}")
 
     detalhes = mensagem.get("detalhes")
     if detalhes:
@@ -66,32 +48,24 @@ def formatar_evento(mensagem: dict) -> str:
 
     return linha
 
-
 def formatar_pedido_finalizado(mensagem: dict) -> str:
     pedido = mensagem["pedido"]
-    return (
-        f"{cabecalho_mensagem(mensagem)} "
-        f"[PEDIDO_FINALIZADO] {pedido['id']} - {pedido['status']}"
-    )
+    return (f"{cabecalho_mensagem(mensagem)} "f"[PEDIDO_FINALIZADO] {pedido['id']} - {pedido['status']}")
 
 
 def formatar_erro(mensagem: dict) -> str:
-    return (
-        f"{cabecalho_mensagem(mensagem)} "
-        f"[ERRO] {mensagem.get('detalhes', '')}"
-    )
-
+    return (f"{cabecalho_mensagem(mensagem)} "f"[ERRO] {mensagem.get('detalhes', '')}")
 
 def inicializar_log(arquivo_log: str, timestamp_inicio: datetime):
     with open(arquivo_log, "w", encoding="utf-8") as arquivo:
-        arquivo.write(
-            "SISTEMA DE VENDAS - Iniciado em "
-            f"{timestamp_inicio.strftime('%Y-%m-%d %H:%M:%S')}\n"
-        )
+        arquivo.write("SISTEMA DE VENDAS - Iniciado em " f"{timestamp_inicio.strftime('%Y-%m-%d %H:%M:%S')}\n")
         arquivo.write("=" * 80 + "\n\n")
 
 
-def salvar_relatorio_json(arquivo_json: str, timestamp_inicio: datetime, timestamp_fim: datetime, total_esperado: Optional[int], pedidos: list, contadores_status: Counter, eventos_registrados: int):
+def salvar_relatorio_json(arquivo_json: str, timestamp_inicio: datetime, 
+                        timestamp_fim: datetime, total_esperado: Optional[int], 
+                        pedidos: list, contadores_status: Counter, eventos_registrados: int):
+
     tempo_total = (timestamp_fim - timestamp_inicio).total_seconds()
 
     relatorio = {
@@ -148,7 +122,8 @@ def monitor_worker(fila_eventos: Queue,arquivo_log: str,arquivo_json: str,timest
 
     timestamp_fim = datetime.now()
 
-    salvar_relatorio_json(arquivo_json=arquivo_json, timestamp_inicio=timestamp_inicio, timestamp_fim=timestamp_fim, total_esperado=total_esperado, pedidos=pedidos, contadores_status=contadores_status, eventos_registrados=eventos_registrados)
+    salvar_relatorio_json(arquivo_json=arquivo_json, timestamp_inicio=timestamp_inicio, timestamp_fim=timestamp_fim, 
+                        total_esperado=total_esperado, pedidos=pedidos, contadores_status=contadores_status, eventos_registrados=eventos_registrados)
 
     escrever_linha_log(arquivo_log, f"{prefixo_monitor()} Active Object finalizado")
     escrever_linha_log(arquivo_log, f"Total de pedidos finalizados: {len(pedidos)}")

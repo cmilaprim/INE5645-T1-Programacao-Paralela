@@ -5,18 +5,18 @@ from typing import Dict, List
 @dataclass
 class ConfiguracaoSistema:
     #quantos workers por etapa
-    num_validadores: int                = 2
-    num_financeiros: int                = 2
+    num_validadores: int                = 3
+    num_financeiros: int                = 4
     num_logisticos: int                 = 2
 
     #taxas de falha 
-    taxa_falha_validacao: float         = 0.25
+    taxa_falha_validacao: float         = 0.15
     taxa_falha_financeira: float        = 0.25
-    taxa_falha_logistica: float         = 0.25
+    taxa_falha_logistica: float         = 0.35
 
     #define quantos clientes e pedidos
     num_clientes: int                   = 4
-    pedidos_por_cliente: int            = 6
+    pedidos_por_cliente: int            = 4
 
     #fila limitada
     tamanho_fila: int                   = 10

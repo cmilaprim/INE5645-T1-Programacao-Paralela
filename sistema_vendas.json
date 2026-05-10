@@ -1,331 +1,226 @@
 {
-  "tempo_total_segundos": 18.695298,
-  "timestamp_inicio": "2026-05-09T16:17:27.742087",
-  "timestamp_fim": "2026-05-09T16:17:46.437385",
-  "total_esperado": 24,
-  "total_pedidos": 24,
+  "tempo_total_segundos": 9.387868,
+  "timestamp_inicio": "2026-05-10T11:41:27.340659",
+  "timestamp_fim": "2026-05-10T11:41:36.728527",
+  "total_esperado": 16,
+  "total_pedidos": 16,
   "contadores_por_status": {
-    "Rejeitado na Validação": 9,
-    "Entregue": 10,
-    "Rejeitado Financeiramente": 2,
-    "Falha na Entrega": 3
+    "Rejeitado na Validação": 3,
+    "Rejeitado Financeiramente": 7,
+    "Entregue": 5,
+    "Falha na Entrega": 1
   },
-  "eventos_registrados": 152,
+  "eventos_registrados": 102,
   "pedidos": [
     {
-      "id": "f624ba00",
+      "id": "3cbb3c6d",
       "cliente_id": "CLT-000",
+      "nome_cliente": "Ana Costa",
+      "item": "Monitor",
+      "valor": 927.9,
+      "status": "Rejeitado na Validação",
+      "timestamp_criacao": "2026-05-10T11:41:27.404669",
+      "timestamps": {
+        "rejeitado_na_validação": "2026-05-10T11:41:29.565699"
+      }
+    },
+    {
+      "id": "74beebc9",
+      "cliente_id": "CLT-002",
+      "nome_cliente": "Maria Santos",
+      "item": "Memória RAM",
+      "valor": 3134.2,
+      "status": "Rejeitado na Validação",
+      "timestamp_criacao": "2026-05-10T11:41:27.432272",
+      "timestamps": {
+        "rejeitado_na_validação": "2026-05-10T11:41:29.731347"
+      }
+    },
+    {
+      "id": "f4dad163",
+      "cliente_id": "CLT-003",
+      "nome_cliente": "Pedro Oliveira",
+      "item": "SSD",
+      "valor": 3557.92,
+      "status": "Rejeitado na Validação",
+      "timestamp_criacao": "2026-05-10T11:41:27.355879",
+      "timestamps": {
+        "rejeitado_na_validação": "2026-05-10T11:41:30.261829"
+      }
+    },
+    {
+      "id": "fae2caaf",
+      "cliente_id": "CLT-001",
+      "nome_cliente": "Maria Santos",
+      "item": "Monitor",
+      "valor": 2052.37,
+      "status": "Rejeitado Financeiramente",
+      "timestamp_criacao": "2026-05-10T11:41:27.351143",
+      "timestamps": {
+        "validado": "2026-05-10T11:41:29.144229",
+        "rejeitado_financeiramente": "2026-05-10T11:41:30.662859"
+      }
+    },
+    {
+      "id": "8e230765",
+      "cliente_id": "CLT-000",
+      "nome_cliente": "João Silva",
+      "item": "Monitor",
+      "valor": 1228.55,
+      "status": "Entregue",
+      "timestamp_criacao": "2026-05-10T11:41:27.348574",
+      "timestamps": {
+        "validado": "2026-05-10T11:41:28.285724",
+        "aprovado_financeiramente": "2026-05-10T11:41:30.064952",
+        "entregue": "2026-05-10T11:41:30.782413"
+      }
+    },
+    {
+      "id": "d0162624",
+      "cliente_id": "CLT-002",
+      "nome_cliente": "Maria Santos",
+      "item": "Mouse",
+      "valor": 3404.91,
+      "status": "Entregue",
+      "timestamp_criacao": "2026-05-10T11:41:27.353782",
+      "timestamps": {
+        "validado": "2026-05-10T11:41:28.738615",
+        "aprovado_financeiramente": "2026-05-10T11:41:30.068917",
+        "entregue": "2026-05-10T11:41:31.078038"
+      }
+    },
+    {
+      "id": "9c32c084",
+      "cliente_id": "CLT-001",
+      "nome_cliente": "João Silva",
+      "item": "SSD",
+      "valor": 1037.95,
+      "status": "Rejeitado Financeiramente",
+      "timestamp_criacao": "2026-05-10T11:41:27.493529",
+      "timestamps": {
+        "validado": "2026-05-10T11:41:32.007963",
+        "rejeitado_financeiramente": "2026-05-10T11:41:32.678211"
+      }
+    },
+    {
+      "id": "a978468a",
+      "cliente_id": "CLT-003",
       "nome_cliente": "Pedro Oliveira",
       "item": "Monitor",
-      "valor": 1827.06,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:27.745978",
-      "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:28.828560"
-      }
-    },
-    {
-      "id": "afbb29f6",
-      "cliente_id": "CLT-003",
-      "nome_cliente": "Ana Costa",
-      "item": "Memória RAM",
-      "valor": 3101.52,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:27.749174",
-      "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:31.037594"
-      }
-    },
-    {
-      "id": "30d9f42c",
-      "cliente_id": "CLT-001",
-      "nome_cliente": "Maria Santos",
-      "item": "Mouse",
-      "valor": 3235.31,
+      "valor": 444.44,
       "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:27.747136",
+      "timestamp_criacao": "2026-05-10T11:41:27.443246",
       "timestamps": {
-        "validado": "2026-05-09T16:17:29.169687",
-        "aprovado_financeiramente": "2026-05-09T16:17:31.037908",
-        "entregue": "2026-05-09T16:17:31.720423"
+        "validado": "2026-05-10T11:41:30.221706",
+        "aprovado_financeiramente": "2026-05-10T11:41:32.002409",
+        "entregue": "2026-05-10T11:41:33.232803"
       }
     },
     {
-      "id": "e01b8906",
-      "cliente_id": "CLT-002",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "SSD",
-      "valor": 3490.75,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:27.748672",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:30.074373",
-        "aprovado_financeiramente": "2026-05-09T16:17:31.286786",
-        "entregue": "2026-05-09T16:17:32.007606"
-      }
-    },
-    {
-      "id": "3c7eb024",
-      "cliente_id": "CLT-003",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "Memória RAM",
-      "valor": 2031.94,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:27.879191",
-      "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:33.125564"
-      }
-    },
-    {
-      "id": "42c1be68",
+      "id": "55e89256",
       "cliente_id": "CLT-000",
+      "nome_cliente": "Maria Santos",
+      "item": "Webcam",
+      "valor": 3041.69,
+      "status": "Rejeitado Financeiramente",
+      "timestamp_criacao": "2026-05-10T11:41:27.532687",
+      "timestamps": {
+        "validado": "2026-05-10T11:41:31.573093",
+        "rejeitado_financeiramente": "2026-05-10T11:41:33.266274"
+      }
+    },
+    {
+      "id": "18919029",
+      "cliente_id": "CLT-001",
       "nome_cliente": "Ana Costa",
       "item": "Notebook",
-      "valor": 1079.22,
+      "valor": 1832.1,
       "status": "Rejeitado Financeiramente",
-      "timestamp_criacao": "2026-05-09T16:17:27.818894",
+      "timestamp_criacao": "2026-05-10T11:41:27.557289",
       "timestamps": {
-        "validado": "2026-05-09T16:17:32.351528",
-        "rejeitado_financeiramente": "2026-05-09T16:17:33.129595"
+        "validado": "2026-05-10T11:41:32.777303",
+        "rejeitado_financeiramente": "2026-05-10T11:41:33.364636"
       }
     },
     {
-      "id": "7f5a212c",
-      "cliente_id": "CLT-001",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "Notebook",
-      "valor": 4695.26,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:27.815287",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:32.059069",
-        "aprovado_financeiramente": "2026-05-09T16:17:33.110775",
-        "entregue": "2026-05-09T16:17:34.066187"
-      }
-    },
-    {
-      "id": "c62920a0",
-      "cliente_id": "CLT-002",
-      "nome_cliente": "Maria Santos",
-      "item": "Webcam",
-      "valor": 1302.98,
-      "status": "Falha na Entrega",
-      "timestamp_criacao": "2026-05-09T16:17:27.849374",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:33.266597",
-        "aprovado_financeiramente": "2026-05-09T16:17:35.085829",
-        "falha_na_entrega": "2026-05-09T16:17:36.100312"
-      }
-    },
-    {
-      "id": "0c7d9858",
-      "cliente_id": "CLT-002",
-      "nome_cliente": "Ana Costa",
-      "item": "SSD",
-      "valor": 4686.79,
-      "status": "Falha na Entrega",
-      "timestamp_criacao": "2026-05-09T16:17:27.946201",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:34.493574",
-        "aprovado_financeiramente": "2026-05-09T16:17:35.607206",
-        "falha_na_entrega": "2026-05-09T16:17:36.147574"
-      }
-    },
-    {
-      "id": "f79738b2",
-      "cliente_id": "CLT-001",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "SSD",
-      "valor": 755.16,
+      "id": "8b8b08ea",
+      "cliente_id": "CLT-003",
+      "nome_cliente": "João Silva",
+      "item": "Monitor",
+      "valor": 1919.23,
       "status": "Rejeitado Financeiramente",
-      "timestamp_criacao": "2026-05-09T16:17:27.905055",
+      "timestamp_criacao": "2026-05-10T11:41:27.574167",
       "timestamps": {
-        "validado": "2026-05-09T16:17:35.001900",
-        "rejeitado_financeiramente": "2026-05-09T16:17:36.346916"
+        "validado": "2026-05-10T11:41:32.803773",
+        "rejeitado_financeiramente": "2026-05-10T11:41:33.771057"
       }
     },
     {
-      "id": "152ba088",
-      "cliente_id": "CLT-000",
-      "nome_cliente": "Maria Santos",
-      "item": "Teclado",
-      "valor": 2123.75,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:28.019193",
-      "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:37.696195"
-      }
-    },
-    {
-      "id": "6037a748",
-      "cliente_id": "CLT-001",
+      "id": "e0a16f28",
+      "cliente_id": "CLT-002",
       "nome_cliente": "Ana Costa",
       "item": "Mouse",
-      "valor": 3081.2,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:27.997843",
+      "valor": 1409.8,
+      "status": "Falha na Entrega",
+      "timestamp_criacao": "2026-05-10T11:41:27.490542",
       "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:38.033427"
+        "validado": "2026-05-10T11:41:31.117292",
+        "aprovado_financeiramente": "2026-05-10T11:41:32.145876",
+        "falha_na_entrega": "2026-05-10T11:41:34.115894"
       }
     },
     {
-      "id": "36fa40a2",
-      "cliente_id": "CLT-000",
-      "nome_cliente": "Ana Costa",
-      "item": "Webcam",
-      "valor": 2432.91,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:27.946810",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:36.266653",
-        "aprovado_financeiramente": "2026-05-09T16:17:37.663209",
-        "entregue": "2026-05-09T16:17:38.269508"
-      }
-    },
-    {
-      "id": "7ab531d5",
-      "cliente_id": "CLT-003",
-      "nome_cliente": "Ana Costa",
-      "item": "Teclado",
-      "valor": 243.19,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:27.959944",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:36.474083",
-        "aprovado_financeiramente": "2026-05-09T16:17:37.557408",
-        "entregue": "2026-05-09T16:17:38.336952"
-      }
-    },
-    {
-      "id": "82017e9e",
+      "id": "986ef974",
       "cliente_id": "CLT-001",
       "nome_cliente": "Maria Santos",
-      "item": "SSD",
-      "valor": 4694.61,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:28.908398",
+      "item": "Memória RAM",
+      "valor": 778.35,
+      "status": "Rejeitado Financeiramente",
+      "timestamp_criacao": "2026-05-10T11:41:27.681997",
       "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:39.912298"
+        "validado": "2026-05-10T11:41:33.464709",
+        "rejeitado_financeiramente": "2026-05-10T11:41:34.558464"
       }
     },
     {
-      "id": "7daaa694",
-      "cliente_id": "CLT-003",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "Webcam",
-      "valor": 3868.65,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:28.054547",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:38.555835",
-        "aprovado_financeiramente": "2026-05-09T16:17:39.106924",
-        "entregue": "2026-05-09T16:17:40.214424"
-      }
-    },
-    {
-      "id": "32c117e6",
+      "id": "bdf27ef9",
       "cliente_id": "CLT-002",
       "nome_cliente": "João Silva",
-      "item": "Headphone",
-      "valor": 4858.66,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:30.132239",
+      "item": "Teclado",
+      "valor": 4160.12,
+      "status": "Rejeitado Financeiramente",
+      "timestamp_criacao": "2026-05-10T11:41:27.568644",
       "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:40.542937"
+        "validado": "2026-05-10T11:41:33.221468",
+        "rejeitado_financeiramente": "2026-05-10T11:41:34.734640"
       }
     },
     {
-      "id": "8b3ed8b3",
+      "id": "55525cff",
       "cliente_id": "CLT-000",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "Monitor",
-      "valor": 4454.1,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:29.224246",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:39.545705",
-        "aprovado_financeiramente": "2026-05-09T16:17:40.164135",
-        "entregue": "2026-05-09T16:17:40.892076"
-      }
-    },
-    {
-      "id": "39e78f3c",
-      "cliente_id": "CLT-002",
-      "nome_cliente": "Ana Costa",
-      "item": "Monitor",
-      "valor": 4374.67,
-      "status": "Falha na Entrega",
-      "timestamp_criacao": "2026-05-09T16:17:28.054476",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:38.720976",
-        "aprovado_financeiramente": "2026-05-09T16:17:40.296556",
-        "falha_na_entrega": "2026-05-09T16:17:40.984733"
-      }
-    },
-    {
-      "id": "1f368770",
-      "cliente_id": "CLT-001",
-      "nome_cliente": "Ana Costa",
-      "item": "Mouse",
-      "valor": 1581.98,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:32.142128",
-      "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:42.507527"
-      }
-    },
-    {
-      "id": "25467b0e",
-      "cliente_id": "CLT-003",
-      "nome_cliente": "Pedro Oliveira",
-      "item": "Notebook",
-      "valor": 4433.6,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:31.128646",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:41.231274",
-        "aprovado_financeiramente": "2026-05-09T16:17:42.806026",
-        "entregue": "2026-05-09T16:17:43.391956"
-      }
-    },
-    {
-      "id": "8006fd5a",
-      "cliente_id": "CLT-003",
-      "nome_cliente": "Ana Costa",
-      "item": "Webcam",
-      "valor": 3358.0,
-      "status": "Rejeitado na Validação",
-      "timestamp_criacao": "2026-05-09T16:17:33.389150",
-      "timestamps": {
-        "rejeitado_na_validação": "2026-05-09T16:17:43.838138"
-      }
-    },
-    {
-      "id": "b89afc54",
-      "cliente_id": "CLT-000",
-      "nome_cliente": "Maria Santos",
-      "item": "SSD",
-      "valor": 426.88,
-      "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:32.487438",
-      "timestamps": {
-        "validado": "2026-05-09T16:17:42.642265",
-        "aprovado_financeiramente": "2026-05-09T16:17:43.479154",
-        "entregue": "2026-05-09T16:17:44.131483"
-      }
-    },
-    {
-      "id": "6ac9ef61",
-      "cliente_id": "CLT-002",
       "nome_cliente": "João Silva",
-      "item": "Memória RAM",
-      "valor": 4898.98,
+      "item": "SSD",
+      "valor": 272.41,
       "status": "Entregue",
-      "timestamp_criacao": "2026-05-09T16:17:33.214046",
+      "timestamp_criacao": "2026-05-10T11:41:27.479113",
       "timestamps": {
-        "validado": "2026-05-09T16:17:43.682081",
-        "aprovado_financeiramente": "2026-05-09T16:17:44.986923",
-        "entregue": "2026-05-09T16:17:46.434087"
+        "validado": "2026-05-10T11:41:30.776004",
+        "aprovado_financeiramente": "2026-05-10T11:41:32.609084",
+        "entregue": "2026-05-10T11:41:34.847218"
+      }
+    },
+    {
+      "id": "bb65f262",
+      "cliente_id": "CLT-003",
+      "nome_cliente": "Ana Costa",
+      "item": "Monitor",
+      "valor": 2977.78,
+      "status": "Entregue",
+      "timestamp_criacao": "2026-05-10T11:41:28.406324",
+      "timestamps": {
+        "validado": "2026-05-10T11:41:33.830185",
+        "aprovado_financeiramente": "2026-05-10T11:41:34.938109",
+        "entregue": "2026-05-10T11:41:36.724590"
       }
     }
   ]
